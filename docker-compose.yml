@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: kartoza/postgis
+    container_name: verx_postgres_cont
+    environment:
+      POSTGRES_DB: verx_database
+      POSTGRES_USER: verx_user
+      POSTGRES_PASSWORD: verx_password
+    ports:
+      - "5432:5432"
+
+volumes:
+  verx_postgres_data:
